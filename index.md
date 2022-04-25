@@ -43,44 +43,41 @@ The average overall scores across all 24 courses test of the first phase of the 
 <img width="234" alt="image" src="https://user-images.githubusercontent.com/48109080/165015789-f7bc8496-5a4b-42b3-b561-97973e6c73e0.png">
 
 
+### Model Selection
+
+After selecting the best performing attribute set, this was used to test the three ML algorithms in Step Two. All three ML algorithms underwent hyperparameter tuning and cross-validation using SciKit-learn’s GridSearchCV. For every cross-validation step in this implementation, it was always ensured that the appropriate validation set was used to avoid data leakage and overly optimistic training and validation scores.
+The overall average scores across all 24 courses tested are quickly summarized in the figure below by model and data set (training vs validation vs testing). 
+
+<img width="363" alt="image" src="https://user-images.githubusercontent.com/48109080/165015943-64e1ba57-dba9-4099-860a-9335da02398b.png">
+
+_Comparison of 3 ML algorithms tested on the Enriched Course Specific Model_
+
+Metric	Baseline Dummy Classifier
+- f1_positive	0.054023
+- f1_macro	0.500267
+
+## Feature Importances 
+
+<img width="426" alt="image" src="https://user-images.githubusercontent.com/48109080/165016058-40f9e821-ac54-4404-bd6d-6e469e1c247f.png">
+_Using RFE_
 
 
+<img width="251" alt="image" src="https://user-images.githubusercontent.com/48109080/165016066-469ca3ba-0af3-4b14-a1fe-40778591883a.png">
+_ANOVA_
+
+## Final Model with Selected Features
+
+<img width="233" alt="image" src="https://user-images.githubusercontent.com/48109080/165016109-649568e8-f8a3-4790-b996-b291df9672c1.png">
+
+## Findings
+
+In summary there were four key findings as a result of this experiment that focused on addressing the questions posed by each of the two objectives. 
+
+1.	The best attribute set for predicting future-term student outcomes is the Enriched Course Specific model w/selected features. The sparse course matrix of pass/fail outcomes was out performed by the more complex set of attributes during testing.
+2.	The best performing machine learning algorithm for the course outcome classification task is the AdaBoost mode with Decision Trees as its base classifier. This model was able to obtain the highest F1 test score for the positive class and the highest AUC score, making it the most robust out of the three algorithms tested
+3.	The features identified as important in this experiment ranged from student GPA to credits attempted, however it was evident that student aggregate enrollment attributes are very informative when attempting to predict success in future-term undergraduate courses
+4.	It is relevant to point out that various aggregate enrollment attributes centered around UCC and Gateway courses, and these were identified as relevant when attempting to predict success in future-term undergraduate courses
 
 
+### Author: Andrea Garcia 
 
-
-You can use the [editor on GitHub](https://github.com/dreygar23/dreygar23.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dreygar23/dreygar23.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

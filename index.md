@@ -17,9 +17,13 @@ Focusing on undergraduate student success is important to ensure that the learne
 The raw dataset consisted of 637,327 unique student/course pairings with 48 attributes. This included 38,738 unique undergraduate students with 2,899 different courses across the span of 17 unique enrollments terms running from Fall 2014 to Fall 2021. For the purposes of this project, only three colleges are examined and only two departments within each of these colleges are part of the experiment.
 
 <img width="470" alt="image" src="https://user-images.githubusercontent.com/48109080/165015564-259da16b-4cbd-47d7-996f-8e57a9e8cd11.png">
+
 _Student demographics_
 
+
+
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/48109080/165015572-7e20c3ae-cb05-4f7b-8ae2-45baedfc7950.png">
+
 _Course highlights_
 
 ## Implementation 
@@ -59,15 +63,20 @@ Metric	Baseline Dummy Classifier
 ## Feature Importances 
 
 <img width="426" alt="image" src="https://user-images.githubusercontent.com/48109080/165016058-40f9e821-ac54-4404-bd6d-6e469e1c247f.png">
+
 _Using RFE_
 
 
+
 <img width="251" alt="image" src="https://user-images.githubusercontent.com/48109080/165016066-469ca3ba-0af3-4b14-a1fe-40778591883a.png">
+
 _ANOVA_
 
 ## Final Model with Selected Features
 
-<img width="233" alt="image" src="https://user-images.githubusercontent.com/48109080/165016109-649568e8-f8a3-4790-b996-b291df9672c1.png">
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/48109080/165016109-649568e8-f8a3-4790-b996-b291df9672c1.png">
+
 
 ## Findings
 
